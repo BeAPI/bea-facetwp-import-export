@@ -1,6 +1,6 @@
 {
   "name": "bea/bea-facetwp-import-export",
-  "description": "Allows to grab json export as json file and not copy/paste code",
+  "description": "Allows to grab FacetWP json export as json file and not copy/paste code",
   "minimum-stability": "stable",
   "license": "GPL-2.0",
   "authors": [
