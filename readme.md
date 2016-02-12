@@ -15,6 +15,11 @@ composer install
 
 Then go to tools > FacetWP Import Export page to import or export your settings
 
+## TODO ##
+
+* Change strtotime() export file for names
+* add toggle all options (export)
+
 ## Changelog ##
 
 ### 0.1
