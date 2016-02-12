@@ -15,10 +15,21 @@ composer dump-autoload
 
 Then go to tools > FacetWP Import Export page to import or export your settings
 
-In case you want to include this small plugin to your project running composer you can run the following command :
+In case you want to include this small plugin to your project running composer you can add this line to your composer.json :
 
 ```
-composer require "bea/bea-facetwp-import-export"
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/BeAPI/bea-facetwp-import-export"
+    }
+  ]
+```
+
+then run the command :
+
+```
+composer require bea/bea-facetwp-import-export dev-master
 ```
 
 ## TODO ##
