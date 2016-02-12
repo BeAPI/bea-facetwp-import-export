@@ -13,6 +13,8 @@ git clone https://github.com/bea/bea-facetwp-import-export && cd bea-facetwp-imp
 composer install
 ```
 
+Then go to tools > FacetWP Import Export page to import or export your settings
+
 ## Changelog ##
 
 ### 0.1
