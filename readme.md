@@ -10,10 +10,16 @@ To get this work, use composer :
 
 ```
 git clone https://github.com/bea/bea-facetwp-import-export && cd bea-facetwp-import-export
-composer install
+composer dump-autoload
 ```
 
 Then go to tools > FacetWP Import Export page to import or export your settings
+
+In case you want to include this small plugin to your project running composer you can run the following command :
+
+```
+composer require "bea/bea-facetwp-import-export"
+```
 
 ## TODO ##
 
