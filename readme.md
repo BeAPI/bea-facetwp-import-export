@@ -34,7 +34,6 @@ composer require bea/bea-facetwp-import-export dev-master
 
 ## TODO ##
 
-* Change strtotime() export file for names
 * add toggle all options (export)
 
 ## Changelog ##
