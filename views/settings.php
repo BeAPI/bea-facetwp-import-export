@@ -14,13 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<h2><?php _e( 'Export' ); ?></h2>
 
-				<form method="POST">
+				<form method="POST" id="fwp-ie-form">
+
+					<!-- select all boxes -->
+					<input type="checkbox" name="export_facetwp_all" id="fwp-ie-select-all">
+					
+					<label for="select-all"><strong><?php _e( 'All' ); ?></strong></label> <br />
 					<?php foreach ( $export as $val => $label ) : ?>
 						<input type="checkbox" name="export_facetwp[]" value="<?php echo $val; ?>">
-						<label><?php echo $label; ?></label>
+						<label><?php echo $label; ?></label><br />
 					<?php endforeach; ?>
 					<input type="hidden" name="action" value="export_facetwp_settings"/>
-
 					<p>
 						<?php wp_nonce_field( 'export_facetwp_nonce', 'export_facetwp_nonce' ); ?>
 						<?php submit_button( __( 'Export' ), 'primary', 'submit', false ); ?>

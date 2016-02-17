@@ -14,6 +14,7 @@ class BEA_FacetWP_Export_Import {
 		add_action( 'admin_menu', array( $this, 'submenu_page' ) );
 		add_action( 'admin_init', array( $this, 'export_settings' ) );
 		add_action( 'admin_init', array( $this, 'import_settings' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 
 	}
 
@@ -26,6 +27,21 @@ class BEA_FacetWP_Export_Import {
 			'facetwp-export-import',
 			array( $this, 'callback' ) );
 
+	}
+
+
+	/**
+	 * @return bool|void
+	 * @author Julien Maury
+	 */
+	public function admin_enqueue_scripts( $hook_suffix ){
+
+		if ( 'tools_page_facetwp-export-import' !== $hook_suffix ) {
+			return false;
+		}
+
+		wp_register_script( 'bea-facetwp-ie', BEA_FACETWPIE_URL . 'js/admin.js', array(), BEA_FACETWPIE_VERSION, true );
+		wp_enqueue_script( 'bea-facetwp-ie' );
 	}
 
 

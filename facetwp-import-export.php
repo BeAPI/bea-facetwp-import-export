@@ -16,6 +16,10 @@ define( 'BEA_FACETWPIE_VERSION', '0.1' );
 define( 'BEA_FACETWPIE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BEA_FACETWPIE_URL', plugin_dir_url( __FILE__ ) );
 
+if ( ! file_exists( BEA_FACETWPIE_DIR . 'vendor/autoload.php' ) ) {
+	return false;
+}
+
 require BEA_FACETWPIE_DIR . 'vendor/autoload.php';
 
 add_action( 'plugins_loaded', 'bea_facetwp_import_export' );
