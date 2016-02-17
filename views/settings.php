@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<!-- select all boxes -->
 					<input type="checkbox" name="export_facetwp_all" id="fwp-ie-select-all">
 					
-					<label for="select-all"><strong><?php _e( 'All' ); ?></strong></label> <br />
+					<label for="fwp-ie-select-all"><strong><?php _e( 'All' ); ?></strong></label> <br />
 					<?php foreach ( $export as $val => $label ) : ?>
 						<input type="checkbox" name="export_facetwp[]" value="<?php echo $val; ?>">
 						<label><?php echo $label; ?></label><br />
